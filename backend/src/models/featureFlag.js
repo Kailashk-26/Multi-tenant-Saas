@@ -12,7 +12,7 @@ const featureFlagSchema = new mongoose.Schema({
 }, 
 {timestamps: true});
 
-featureFlagSchema.index({ organizationId: 1,key : 1},{unique:true});
+featureFlagSchema.index({ organizationId: 1,flag : 1},{unique:true});
 
 const FeatureFlag=mongoose.model('FeatureFlag',featureFlagSchema);
 

@@ -1,7 +1,7 @@
 import User from "../models/user.js"
 import bcrypt from "bcryptjs"
 import jwt from "jsonwebtoken"
-import { superAdmin } from "../config/superadmin.js";
+import { superAdmin } from "../config/superAdmin.js";
 
 const generateToken = (userId) => {
   return jwt.sign(

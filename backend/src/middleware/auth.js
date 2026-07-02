@@ -13,10 +13,18 @@ const protect = async (req, res, next) => {
     const token = auth.split(" ")[1];
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    if (decoded.userId === superAdmin.id) {
+      req.user = {
+        id: superAdmin.id,
+        email: superAdmin.email,
+        role: "SUPER_ADMIN",
+      };
+      return next();
+    }
 
     const user = await User.findById(decoded.userId).select("-password");
 
-    if (!user && decoded.userId!==superAdmin.id) {
+    if (!user) {
       return res.status(401).json({ message: "User not found" });
     }
 
