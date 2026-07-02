@@ -1,6 +1,6 @@
 import express from 'express'
-import { createOrg, deleteOrg, getAllOrg } from '../controllers/orgController'
-import protect from '../middleware/auth'
+import { createOrg, deleteOrg, getAllOrg } from '../controllers/orgController.js'
+import protect from '../middleware/auth.js'
 
 const orgRouter=express.Router()
 

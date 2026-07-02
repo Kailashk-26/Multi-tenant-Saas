@@ -4,6 +4,7 @@ import connectDB from './config/db.js'
 import cors from 'cors'
 import orgRouter from './routes/orgRoutes.js'
 import authRouter from './routes/authRoutes.js'
+import flagRouter from './routes/flagRoutes.js'
 
 const app=express()
 const PORT=process.env.PORT || 3000;

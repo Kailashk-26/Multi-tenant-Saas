@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
-import FeatureFlag from "../models/featureFlag";
-import Organization from "../models/organization";
+import FeatureFlag from "../models/featureFlag.js";
+import Organization from "../models/organization.js";
 
 export const createFlag = async (req, res) => {
     try {

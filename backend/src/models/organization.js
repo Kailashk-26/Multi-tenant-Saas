@@ -2,7 +2,7 @@ import mongoose from 'mongoose'
 
 const organizationSchema=new mongoose.Schema({
     name:{
-        type:string,
+        type:String,
         required:true,
         unique:true,
         trim:true

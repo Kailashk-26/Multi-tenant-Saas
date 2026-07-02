@@ -1,8 +1,8 @@
 import express from 'express'
-import { createFlag, deleteFlag, getFlagsByOrg, updateFlag } from '../controllers/featureFlagController'
-import protect from '../middleware/auth'
+import { createFlag, deleteFlag, getFlagsByOrg, updateFlag } from '../controllers/featureFlagController.js'
+import protect from '../middleware/auth.js'
 
-flagRouter=express.Router()
+const flagRouter=express.Router()
 
 flagRouter.get('/getflags/:organizationId',protect,getFlagsByOrg)
 flagRouter.post('/createflag',protect,createFlag)
