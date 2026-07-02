@@ -1,0 +1,9 @@
+{
+  "name": "frontends",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node run-all-frontends.js",
+    "build": "npm --prefix frontend-super-admin run build && npm --prefix frontend-org-admin run build && npm --prefix frontend-user run build"
+  }
+}
